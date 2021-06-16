@@ -40,6 +40,28 @@
     <script type="text/javascript" src="js/theme/white-theme.js"></script>
     <script type="text/javascript" src="js/theme/black-theme.js"></script>
     <script>
+      function saveImage(editor) {
+      //TODO: add custom save logic here
+      // const dataURL = this.toDataURL();
+      // let imageName = this.getImageName();
+      // let blob, type, w;
+
+      // if (isSupportFileApi() && window.saveAs) {
+      //   blob = base64ToBlob(dataURL);
+      //   type = blob.type.split('/')[1];
+      //   if (imageName.split('.').pop() !== type) {
+      //     imageName += `.${type}`;
+      //   }
+      //   saveAs(blob, imageName); // eslint-disable-line
+      // } else {
+      //   w = window.open();
+      //   w.document.body.innerHTML = `<img src='${dataURL}'>`;
+      // }
+
+      //const dataURL = editor.toDataURL();
+      //window.open().document.body.innerHTML = `<img src='${dataURL}'>`;
+      }
+      
       // Image editor
       var imageEditor = new tui.ImageEditor('#tui-image-editor-container', {
         includeUI: {
@@ -50,6 +72,7 @@
           theme: blackTheme, // or whiteTheme
           initMenu: 'filter',
           menuBarPosition: 'bottom',
+          saveImage: saveImage,
         },
         cssMaxWidth: 700,
         cssMaxHeight: 500,

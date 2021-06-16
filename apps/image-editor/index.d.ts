@@ -168,6 +168,7 @@ declare namespace tuiImageEditor {
     };
     menuBarPosition?: string;
     usageStatistics?: boolean;
+    saveImage?: Object;
   }
 
   interface ISelectionStyleConfig {
